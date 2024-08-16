@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UBS Fundamentals</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- Fluent UI styles (if you need them for styling) -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"/>
+
+    <!-- Custom styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-Fabric">
+    <header class="ms-bgColor-neutralLighter ms-font-m ms-fontColor-neutralPrimary">
+        <!--<img src="ubs.png"/>-->
+        <h1 class="ms-font-l">UBS Fundamentals Model Upload</h1>
+    </header>
+    
+    <main id="app-body" class="ms-welcome__main">
+        <div id="mainContent">
+            <p class="ms-font-m">Click the button below to upload data from cells A1 to C4:</p>
+            
+            <!-- Upload Model Button -->
+            <button id="apiCallButton" class="ms-Button ms-Button--primary">
+                <span class="ms-Button-label">Upload Model</span>
+            </button>
+
+            <!-- Validate Data Button -->
+            <button id="validateButton" class="ms-Button ms-Button--secondary">
+                <span class="ms-Button-label">Validate Data</span>
+            </button>
+
+            <!-- Start Wizard Button -->
+            <button id="startWizardButton" class="ms-Button ms-Button--third">
+                <span class="ms-Button-label">Start Wizard Test</span>
+            </button>
+
+            <!-- Display the result from the API call -->
+            <p id="result" class="ms-font-m"></p>
+        </div>
+
+        <!-- Wizard Content will be dynamically inserted here -->
+        <div id="wizardContent" style="display: none;">
+            <h1 class="ms-font-l">Upload Flow Step 1</h1>
+            <p class="ms-font-m">This is the first step in the upload flow.</p>
+            
+            <!-- Back Button -->
+            <button id="backButton" class="ms-Button ms-Button--primary">
+                <span class="ms-Button-label">Back</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Task pane script -->
+    <script src="taskpane.js"></script>
+</body>
+
+</html>
